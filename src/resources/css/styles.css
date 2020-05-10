@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron.ttf');
+}
+
+.root {
+    -fx-font-family: Orbitron;
+}
+
+.cell {
+    -fx-font-size: 5em;
+}
+
+#grid-pane {
+    -fx-background-color: #08610F;
+}
+
+#shade1 {
+    -fx-background-color: #1CAD28;
+}
+
+#shade2 {
+    -fx-background-color: #16871F;
+}
