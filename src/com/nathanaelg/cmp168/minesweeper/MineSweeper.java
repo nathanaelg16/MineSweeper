@@ -1,10 +1,18 @@
+package com.nathanaelg.cmp168.minesweeper;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
+/**
+ * This MineSweeper game was created for my final project
+ * of CMP 168 - Programming Methods II.
+ * <p>
+ * This class starts the JavaFX application and shows the
+ * primary stage. The functionality of the game including
+ * the graphical user interface is handled by the
+ * {@link GameDriver} class.
+ */
 public class MineSweeper extends Application {
 
     public static void main(String[] args) {
@@ -13,16 +21,8 @@ public class MineSweeper extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        StackPane stackPane = new StackPane();
         GameDriver driver = new GameDriver(DifficultyLevel.EASY);
-        driver.onGameWin((level) -> {
-            driver.setDifficultyLevel(level);
-            stackPane.getChildren().set(0, driver.getGameGridPane());
-        });
-
-        stackPane.getChildren().addAll(driver.getGameGridPane(), driver.getMediaView());
-
-        Scene scene = new Scene(stackPane);
+        Scene scene = new Scene(driver.getGamePane());
         scene.getStylesheets().add("/resources/css/styles.css");
         primaryStage.setScene(scene);
         primaryStage.setTitle("Mine Sweeper 💣");

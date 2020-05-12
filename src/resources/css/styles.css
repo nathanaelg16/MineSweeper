@@ -11,6 +11,16 @@
     -fx-font-size: 5em;
 }
 
+#timer {
+    -fx-text-fill: red;
+    -fx-font-size: 3em;
+    -fx-border-color: black;
+    -fx-border-radius: 2px;
+    -fx-background-color: black;
+    -fx-text-alignment: center;
+    -fx-text-origin: baseline;
+}
+
 #grid-pane {
     -fx-background-color: #08610F;
 }
